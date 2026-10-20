@@ -52,6 +52,6 @@ All slides go in one Markdown text. Three dashes `---` separate one slide from t
 
 ## Author
 
-Name: YOUR NAME
-Roll No: YOUR ROLL NUMBER
+Name: Amna Nawaz
+Roll No: BITF24A038
 BS Information Technology, University of the Punjab
