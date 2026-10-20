@@ -1,0 +1,121 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f3a5f;
+  color: white;
+  padding: 10px 20px;
+}
+header h1 { margin: 0; font-size: 20px; }
+
+button {
+  background: #2d6cdf;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 0 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover { background: #1b4fb0; }
+button:disabled { background: #999; cursor: not-allowed; }
+
+#saveMsg { margin-left: 10px; font-size: 13px; color: #b6ffb6; }
+
+/* editor: two columns */
+#editor {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  height: calc(100vh - 56px);
+}
+.box {
+  flex: 1;
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.box h2 { margin: 0 0 8px 0; font-size: 16px; }
+
+textarea {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  padding: 10px;
+  background: #2b2b2b;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+}
+
+/* slide box */
+.slide {
+  flex: 1;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  overflow: auto;
+}
+.slide h1 { margin-top: 0; color: #1f3a5f; }
+.slide code {
+  background: #e6e6e6;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+.slide pre {
+  background: #2b2b2b;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  overflow: auto;
+}
+.slide pre code { background: none; }
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.count { font-weight: bold; min-width: 60px; text-align: center; }
+
+/* presentation screen */
+#presentation {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 10;
+}
+#presentation .slide.big {
+  background: white;
+  font-size: 28px;
+  padding: 40px;
+}
+#presentation .count { color: white; }
+
+.hidden { display: none !important; }
+
+@media (max-width: 700px) {
+  #editor { flex-direction: column; height: auto; }
+  textarea { min-height: 250px; }
+}

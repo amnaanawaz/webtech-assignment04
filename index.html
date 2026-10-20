@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Markdown Slides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header with Save and Present buttons -->
+  <header>
+    <h1>Markdown Slides</h1>
+    <div>
+      <button id="saveBtn">Save</button>
+      <button id="presentBtn">Present</button>
+      <span id="saveMsg"></span>
+    </div>
+  </header>
+
+  <!-- Create / Edit screen: 2 sections -->
+  <main id="editor">
+    <section class="box">
+      <h2>Markdown Code</h2>
+      <textarea id="mdInput" spellcheck="false"></textarea>
+    </section>
+
+    <section class="box">
+      <h2>Live View</h2>
+      <div class="slide" id="previewSlide"></div>
+      <div class="controls">
+        <button data-action="left">&larr; Left</button>
+        <span class="count">1 / 1</span>
+        <button data-action="right">Right &rarr;</button>
+        <button data-action="full" class="fullBtn">&#x26F6; Full Screen</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Presentation screen -->
+  <div id="presentation" class="hidden">
+    <div class="slide big" id="presentSlide"></div>
+    <div class="controls">
+      <button data-action="left">&larr; Left</button>
+      <span class="count">1 / 1</span>
+      <button data-action="right">Right &rarr;</button>
+      <button data-action="full" class="fullBtn">&#x26F6; Full Screen</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
